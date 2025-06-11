@@ -2,18 +2,18 @@ package pkg
 
 import "errors"
 
-func Calc(ops string, a int, b int) (float64, error) {
-	switch ops {
-	case "dodaj":
+func Calc(a float64, b float64, sign string) (float64, error) {
+	switch sign {
+	case "+":
 		result, _ := Add(a, b)
 		return result, nil
-	case "odejmij":
+	case "-":
 		result, err := Subtract(a, b)
 		return result, err
-	case "pomnoz":
+	case "*":
 		result, err := Multiply(a, b)
 		return result, err
-	case "podziel":
+	case "/":
 		result, err := Divide(a, b)
 		return result, err
 	default:
