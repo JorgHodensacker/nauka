@@ -26,14 +26,14 @@ func SyntaxCheck(x string, y string, z string) (float64, float64, string) {
 	}
 
 	// Sprawdzenie, czy operator jest jednym z dozwolonych
-	sign := y
-	switch sign {
+	o := y
+	switch o {
 	case "+", "-", "*", "/":
 	default:
-		fmt.Println("Nieznany operator:", sign)
+		fmt.Println("Nieznany operator:", o)
 		os.Exit(1)
 	}
 
 	// Zwrócenie poprawnych argumentów i operatora
-	return a, b, sign
+	return a, b, o
 }
